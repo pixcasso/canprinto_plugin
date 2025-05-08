@@ -1,0 +1,51 @@
+@keyframes crazy-loading {
+  0% {
+      transform: skewX(-45deg) translateX(-80%)
+  }
+
+  to {
+      transform: skewX(-45deg) translateX(80%)
+  }
+}
+
+.canprinto-thumbnail {
+  max-width: 50px;
+  max-height: 50px;
+  margin-right: 10px;
+}
+
+.wapf-field-description {
+  display: none;
+}
+
+.price.nasa-single-product-price span, .price.nasa-single-product-price small {
+  display: none;
+}
+
+.price.nasa-single-product-price.cpo-status-loading span, .price.nasa-single-product-price.cpo-status-loading small {
+  display: none !important;
+}
+
+.cpo-status-loading {
+  margin: 15px 10px 15px 5px;
+  min-height: 50px;
+  width: 100%;
+  animation-duration: 3s;
+  animation-fill-mode: forwards;
+  animation-iteration-count: infinite;
+  animation-name: placeHolderShimmer;
+  animation-timing-function: linear;
+  background-color: #f6f7f8;
+  background: linear-gradient(to right, #eeeeee 8%, #ffffff 18%, #eeeeee 33%);
+  background-size: 1000px 1000px;
+}
+
+@keyframes placeHolderShimmer {
+  0% {
+    background-position: -1000px 0
+  }
+
+  100% {
+    background-position: 1000px 0
+  }
+}
